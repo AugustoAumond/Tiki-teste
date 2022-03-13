@@ -5,18 +5,14 @@ import DivBody from '../divbody/DivBody';
 
 const user = `${process.env.PUBLIC_URL}/imagens/Usuario.png`
 
-
 function HomePage() {
-
-
 
     return (
     
       <Body>
          <Background/>
           <DivBody/>
-      </Body>
-    
+      </Body>   
   );
 }
 export default HomePage;
@@ -24,10 +20,8 @@ export default HomePage;
 
 const Body = styled.div`
 position: relative;
-width: 562px;
-height: 966px;
-
-  
+width: 1780px;
+height: 3000px; 
 `
 
 
