@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import {HiOutlinePlusSm} from 'react-icons/hi'
+
 
 function Background () {
     
@@ -26,6 +28,10 @@ function Background () {
             </g>
             </svg>
 
+            <HiOutlinePlusSm id='icon-yellow'/>
+            <HiOutlinePlusSm id='icon-yellow2'/>
+            <HiOutlinePlusSm id='icon-yellow3'/>
+
             <div>
                 <p id='titlefinal'> TEXTO LEGAL </p>
                 <p id='finaltext'> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit omnis tenetur perferendis illum dicta nisi ut. Deserunt, aliquid suscipit molestias repellat unde assumenda ex quisquam a quae, adipisci neque officia!
@@ -41,55 +47,81 @@ function Background () {
 export default Background;
 
 const DivImg = styled.div`
-    img {       
-        position: relative;
-        top: 22px;
-        left: 272px;
-        width: 2202px;
-        height: 3559px;
-    }
+img {       
+    position: relative;
+    top: 22px;
+    left: 272px;
+    width: 2202px;
+    height: 3559px;
+}
 
-    #logo-tiki {
-        position: absolute;
-        top: 156px;
-        left: 1207px;
-    }
+#logo-tiki {
+    position: absolute;
+    top: 156px;
+    left: 1207px;
+}
 
-    #tittle2{
-        position: absolute;
-        top: 2300px;
-        left: 1036px;
-    }
+#tittle2{
+    position: absolute;
+    top: 2300px;
+    left: 1036px;
+}
 
-    #titlefinal {
-        position: absolute;
-        top: 3173px;
-        left: 1315px;
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
+#icon-yellow{
+    position: absolute;
+    height: 27px;
+    width: 25px;
+    color: #fb0;
+    top: 2415px;
+    left: 1348px;
+}
 
-    }
+#icon-yellow2{
+    position: absolute;
+    height: 27px;
+    width: 25px;
+    color: #ffbb0060;
+    top: 2442px;
+    left: 1348px;
+}
 
-    #finaltext{
-        position: absolute;
-        text-align: center;
-        top: 3220px;
-        left: 842px;
-        width: 1107px;
-        font-size: 10px regular;
-        color: white;
-    }
+#icon-yellow3{
+    position: absolute;
+    height: 27px;
+    width: 25px;
+    color: #ffbb0025;
+    top: 2467px;
+    left: 1348px;
+}
 
-    #finaltext2{
-        position: absolute;
-        text-align: center;
-        top: 3348px;
-        left: 842px;
-        width: 1107px;
-        font-size: 10px regular;
-        color: white;
-    }
-    
+#titlefinal {
+    position: absolute;
+    top: 3173px;
+    left: 1315px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+#finaltext{
+    position: absolute;
+    text-align: center;
+    top: 3220px;
+    left: 842px;
+    width: 1107px;
+    font-size: 10px regular;
+    color: white;
+}
+
+#finaltext2{
+    position: absolute;
+    text-align: center;
+    top: 3348px;
+    left: 842px;
+    width: 1107px;
+    font-size: 10px regular;
+    color: white;
+}
     
 `

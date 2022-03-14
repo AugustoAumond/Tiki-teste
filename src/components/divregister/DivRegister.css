@@ -1,0 +1,95 @@
+#box{
+    background: #26093A;
+    position: absolute;
+    top: 2575px;
+    left: 1120px;
+    width: 500px;
+    height: 500px;
+    border-radius: 80px;
+}
+
+    #txt{
+        font-size: 18px;
+        color: white;
+        position: absolute;
+        top: 65px;
+        width: 333px;
+        text-align: center;
+        left: 93px;
+        font-weight: bold;
+    }
+
+    #name{
+        background: #26093A;
+        border-radius: 50px;
+        border: 1px solid white;
+        position: absolute;
+        width: 375px;
+        height: 24px;
+        padding: 15px;
+        background: #26093A;
+        top: 200px;
+        left: 45px;
+        font-size: 14px;
+        margin: 5px ('placeholder');
+    }
+
+    #name:focus {
+        background: #26093A;
+        border: solid 1px #FC2BEE;
+        color: #FC2BEE;    
+    }
+
+
+    #email{
+        background: #26093A;
+        border-radius: 50px;
+        border: 1px solid white;
+        position: absolute;
+        width: 375px;
+        height: 24px;
+        padding: 15px;
+        background: #26093A;
+        top: 274px;
+        left: 45px;
+        font-size: 14px;
+    }
+
+    #email:focus {
+        background: #26093A;
+        border: solid 1px #FC2BEE;
+        color: #FC2BEE;    
+    }
+
+    #radio{
+        position: absolute;
+        top: 358px;
+        left: 36px;
+        width: 20px;
+        height: 20px;
+    }
+
+    #check{
+        color: white;
+        position: absolute;
+        top: 345px;
+        left: 72px;
+    }
+
+    #enviar{
+        color: white;
+        position: absolute;
+        top: 400px;
+        left: 51px;
+        width: 400px;
+        height: 65px;
+        border-radius: 50px;
+        box-shadow: 3px 5px #fc2bee
+    }
+
+    #button {
+        font-size: 18px;
+        font-weight: bold;
+        color: black;
+        cursor: pointer;
+    }
