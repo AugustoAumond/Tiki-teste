@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Background from '../background/Background';
 import DivBody from '../divbody/DivBody';
+import Register from '../divregister/DivRegister';
+
 
 const user = `${process.env.PUBLIC_URL}/imagens/Usuario.png`
 
@@ -10,8 +12,9 @@ function HomePage() {
     return (
     
       <Body>
-         <Background/>
-          <DivBody/>
+        <Background/>
+        <DivBody/>
+        <Register/>   
       </Body>   
   );
 }

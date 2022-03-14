@@ -26,6 +26,15 @@ function Background () {
             </g>
             </svg>
 
+            <div>
+                <p id='titlefinal'> TEXTO LEGAL </p>
+                <p id='finaltext'> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit omnis tenetur perferendis illum dicta nisi ut. Deserunt, aliquid suscipit molestias repellat unde assumenda ex quisquam a quae, adipisci neque officia!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sapiente natus magni labore consectetur id et beatae, aut laudantium eaque accusantium voluptatem sed maxime voluptates culpa fuga praesentium voluptate nam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam explicabo nihil, debitis similique a perferendis omnis ullam neque maxime nemo blanditiis, rem iusto ad voluptatem excepturi, deserunt culpa ut recusandae!</p>
+
+                <p id='finaltext2'> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse aliquam iste optio magni natus dolorem eligendi sapiente quos veniam, saepe sunt doloribus, non voluptates commodi fugit assumenda delectus necessitatibus enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, facilis ipsa? Quas sint similique, aliquam quidem saepe corporis quo illum eveniet veniam cum cupiditate neque beatae delectus rerum velit voluptatibus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis voluptatibus sapiente, est porro voluptates quae explicabo necessitatibus sint! Totam tempora rem mollitia dignissimos, error sed reiciendis! Modi laboriosam earum nobis?</p>
+            </div>
+
             </DivImg>
 }
 
@@ -37,7 +46,7 @@ const DivImg = styled.div`
         top: 22px;
         left: 272px;
         width: 2202px;
-        height: 3705px;
+        height: 3559px;
     }
 
     #logo-tiki {
@@ -50,6 +59,36 @@ const DivImg = styled.div`
         position: absolute;
         top: 2300px;
         left: 1036px;
+    }
+
+    #titlefinal {
+        position: absolute;
+        top: 3173px;
+        left: 1315px;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+
+    }
+
+    #finaltext{
+        position: absolute;
+        text-align: center;
+        top: 3220px;
+        left: 842px;
+        width: 1107px;
+        font-size: 10px regular;
+        color: white;
+    }
+
+    #finaltext2{
+        position: absolute;
+        text-align: center;
+        top: 3348px;
+        left: 842px;
+        width: 1107px;
+        font-size: 10px regular;
+        color: white;
     }
     
     
