@@ -1,78 +1,115 @@
 import styled from 'styled-components';
 import {useState} from 'react';
 import { HiOutlinePlusSm}  from 'react-icons/hi';
-import './DivBody.css';
+import './DivEvents.css';
 
 
-function DivBody () {
+function DivEvents () {
     const [index, setIndex] = useState(0);
 
+    let pointone = document.querySelector('#point1');
+    let pointtwo = document.querySelector('#point2');
+    let pointthree = document.querySelector('#point3');
+
+    //Objeto para usar o mover over e out;
     const events = [
         {id:1, foto: 'img/imagem.jpg', date: '16 DE MARÇO' },
         {id: 2, foto: 'img/imagem2.jpg', date:'17 DE MARÇO'},
+        {id: 3, foto: '', date:'18 DE MARÇO'},
+        {id: 4, foto: '', date:'19 DE MARÇO'},
+        {id: 5, foto: '', date:'20 DE MARÇO'},
+        {id: 6, foto: '', date:'21 DE MARÇO'},
+        {id: 7, foto: '', date:'22 DE MARÇO'},
+        {id: 8, foto: '', date:'23 DE MARÇO'},
+        {id: 9, foto: '', date:'24 DE MARÇO'},
+        {id: 10, foto: '', date:'25 DE MARÇO'},
+        {id: 11, foto: '', date:'26 DE MARÇO'},
+        {id: 12, foto: '', date:'27 DE MARÇO'}
         ]
 
-    function FourList(){
+    //Pegando 4 itens do objeto;
+    function FourItens (index){
+        Points();
         let newList = [];
-        for (index; index < 3; setIndex(index +1)) {
-            newList.push(events[index]);            
+        if (index === 0){
+        for (index = 0; index < 4; index++) {
+                newList.push(events[index]);
         }
-        console.log(newList)
         return newList;
-    }
-
-
-    function Show(){
-        let list = FourList();
-        list.map((list, i) => {
-            if (list.foto === ''){
-                return (
-                <div id={`events${i}`}>
-                <div id='card' alt="" >
-                    <svg id="lock" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="17.638" height="24" viewBox="0 0 17.638 24">
-                    <defs>
-                        <clipPath id="clip-path">
-                        <rect id="Retângulo_8" data-name="Retângulo 8" width="17.638" height="24" fill="#fff"/>
-                        </clipPath>
-                    </defs>
-                    <g id="Grupo_3" data-name="Grupo 3" clip-path="url(#clip-path)">
-                        <path id="Caminho_2" data-name="Caminho 2" d="M0,21.505V11.622A2.5,2.5,0,0,1,2.495,9.127h.054V5.493A5.5,5.5,0,0,1,8.041,0H9.6a5.5,5.5,0,0,1,5.495,5.493V9.127h.054a2.5,2.5,0,0,1,2.493,2.495v9.884A2.5,2.5,0,0,1,15.145,24H2.495A2.5,2.5,0,0,1,0,21.505m9.772-2.183V17.259a1.759,1.759,0,0,0,.312-.249,1.788,1.788,0,1,0-2.528,0,1.759,1.759,0,0,0,.312.249v2.063a.869.869,0,0,0,.87.869H8.9a.868.868,0,0,0,.869-.869m3.241-10.2V5.751A3.673,3.673,0,0,0,9.34,2.079H8.3A3.673,3.673,0,0,0,4.627,5.751V9.127Z" fill="#fff" fill-rule="evenodd"/>
-                    </g>
-                    </svg>  
-                </div> 
-                <p id='date1'> {list.data}</p> 
-                </div>
-                )
-            } else { 
-                return (
-                    <div id={`events${i}`}>
-                    <img id='card' src={list.foto} alt="" />
-                    <p id='date'> {list.data}</p></div>
-                )
+        }else if (index === 4){
+            for (index === 4; index < 8; index++) {
+                newList.push(events[index]);
             }
-        })   
+        console.log(newList);
+        return newList;
+        }
+        else if (index === 8){
+            for (index; index < 12; index++) {
+                newList.push(events[index]);
+            }
+        return newList;
+        }
     }
 
+    //Troca a cor dos pontos do final da box conforme altera o index;
+    function Points (){       
+        if (index === 4){
+            pointone.style.background = 'gray';
+            pointtwo.style.background = 'white';
+            pointthree.style.background = 'gray';
+        }
+
+        if (index === 8){
+            pointtwo.style.background = 'gray';
+            pointthree.style.background = 'white';
+            document.querySelector('#arrow-right').style.display = 'none';
+            document.querySelector('#circle-right').style.display = 'none';
+        }
+    }
+
+    //Adiciona valor ao index e altera a cor do primeiro ponto
+    function IndexSubtract(){
+        if (index > 0){
+            if (index === 4){
+                pointone.style.background = 'white';
+                pointtwo.style.background = 'gray'; 
+           }   
+           setIndex (index - 4);      
+        } 
+        document.querySelector('#arrow-right').style.display = 'block';
+        document.querySelector('#circle-right').style.display = 'block';  
+    }
+
+    //Altera o valor do index;
+    function IndexPlus(){
+        if (index < 8){
+           setIndex (index + 4); 
+        }       
+    }
+
+    //Aparecer a div para compartilhar quando mouse subir na img;
     function OpenDiv(){
        let share =  document.querySelector('#sharer');
        share.style.display = 'flex';
     }
 
+    // Desaparecer a div de compartilhar quando mouse sair da img
     function CloseDiv(){
         let share =  document.querySelector('#sharer');
         share.style.display = 'none';
      }
 
-     function ChangeCard1 () {
-         document.querySelector('#card1').style.border = '1px white solid';
-         document.querySelector('#date1').style.color = '#FC2BEE';
+     // Alterar a cor do card e das letras quando mouse estiver sobre o card;
+     function ChangeCard (index) { 
+         document.querySelector(`#card${index}`).style.border = '1px white solid';
+         document.querySelector(`#date${index}`).style.color = 'white';
      }
 
-     function UnchangeCard1 () {
-        document.querySelector('#card1').style.border = 'none';
-        document.querySelector('#date1').style.color = 'white';
+     // Alterar a cor do card e das letras quando mouse sair do card;
+     function UnchangeCard (index) {
+        document.querySelector(`#card${index}`).style.border = 'none';
+        document.querySelector(`#date${index}`).style.color = '#FC2BEE';
     }
-
 
     return <Body>
         <div id='back'> 
@@ -162,40 +199,20 @@ function DivBody () {
             </div>
             <p id='comming'>CONFIRA O QUE JÁ SAIU E O QUE ESTÁ POR VIR!</p>
 
-            <div id='circle-left'></div>
-            <svg id="arrow-left" xmlns="http://www.w3.org/2000/svg" width="12.657" height="14.71" viewBox="0 0 12.657 14.71">
+            <div id='circle-left' onClick={(()=> IndexSubtract())}></div>
+            <svg id="arrow-left" onClick={(()=> IndexSubtract())} xmlns="http://www.w3.org/2000/svg" width="12.657" height="14.71" viewBox="0 0 12.657 14.71">
                 <path id="arrow-left" d="M7.355,0,14.71,12.657H0Z" transform="translate(0 14.71) rotate(-90)" fill="black"/>
             </svg>
 
-          
-
-            <div id='events0'>
-            <img id='card' src="img/imagem.jpg" alt="" />
-            <p id='date'> 16 DE MARÇO</p></div>
-
-            <div id='events1'>
-            <img id='card1' src="img/imagem2.jpg" onMouseOver={(()=>ChangeCard1())} onMouseOut={(()=>UnchangeCard1())} />
-            <p id='date1'> 17 DE MARÇO</p></div>
-
-            <div id='events2'>
-            <div id='card' alt="" >
-                <svg id="lock" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="17.638" height="24" viewBox="0 0 17.638 24">
-                <defs>
-                    <clipPath id="clip-path">
-                    <rect id="Retângulo_8" data-name="Retângulo 8" width="17.638" height="24" fill="#fff"/>
-                    </clipPath>
-                </defs>
-                <g id="Grupo_3" data-name="Grupo 3" clip-path="url(#clip-path)">
-                    <path id="Caminho_2" data-name="Caminho 2" d="M0,21.505V11.622A2.5,2.5,0,0,1,2.495,9.127h.054V5.493A5.5,5.5,0,0,1,8.041,0H9.6a5.5,5.5,0,0,1,5.495,5.493V9.127h.054a2.5,2.5,0,0,1,2.493,2.495v9.884A2.5,2.5,0,0,1,15.145,24H2.495A2.5,2.5,0,0,1,0,21.505m9.772-2.183V17.259a1.759,1.759,0,0,0,.312-.249,1.788,1.788,0,1,0-2.528,0,1.759,1.759,0,0,0,.312.249v2.063a.869.869,0,0,0,.87.869H8.9a.868.868,0,0,0,.869-.869m3.241-10.2V5.751A3.673,3.673,0,0,0,9.34,2.079H8.3A3.673,3.673,0,0,0,4.627,5.751V9.127Z" fill="#fff" fill-rule="evenodd"/>
-                </g>
-                </svg>
-            </div>
-            <p id='date1'> 18 DE MARÇO</p>
-            </div>
-
-            <div id='events3'>
-            <div id='card' alt="" >
-                <svg id="lock" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="17.638" height="24" viewBox="0 0 17.638 24">
+            {FourItens(index).map((list, index)=>(
+            list.foto !== '' ?
+                <div key={index} id={`events${index}`} onMouseOver={(()=> ChangeCard (index))} onMouseOut={(()=> UnchangeCard (index) )}>
+                <img id={`card${index}`} src={list.foto} alt="" />
+                <p id={`date${index}`}> {list.date}</p></div> 
+                    :
+                <div key={index} id={`events${index}`} onMouseOver={(()=> ChangeCard (index))} onMouseOut={(()=> UnchangeCard (index))} >
+                <div id={`card${index}`} alt="" >
+                <svg id={`lock`} xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="17.638" height="24" viewBox="0 0 17.638 24">
                 <defs>
                     <clipPath id="clip-path">
                     <rect id="Retângulo_8" data-name="Retângulo 8" width="17.638" height="24" fill="#fff"/>
@@ -205,13 +222,13 @@ function DivBody () {
                     <path id="Caminho_2" data-name="Caminho 2" d="M0,21.505V11.622A2.5,2.5,0,0,1,2.495,9.127h.054V5.493A5.5,5.5,0,0,1,8.041,0H9.6a5.5,5.5,0,0,1,5.495,5.493V9.127h.054a2.5,2.5,0,0,1,2.493,2.495v9.884A2.5,2.5,0,0,1,15.145,24H2.495A2.5,2.5,0,0,1,0,21.505m9.772-2.183V17.259a1.759,1.759,0,0,0,.312-.249,1.788,1.788,0,1,0-2.528,0,1.759,1.759,0,0,0,.312.249v2.063a.869.869,0,0,0,.87.869H8.9a.868.868,0,0,0,.869-.869m3.241-10.2V5.751A3.673,3.673,0,0,0,9.34,2.079H8.3A3.673,3.673,0,0,0,4.627,5.751V9.127Z" fill="#fff" fill-rule="evenodd"/>
                 </g>
                 </svg>  
-            </div> 
-            <p id='date1'> 19 DE MARÇO</p> 
-            </div>
+                </div> 
+                <p id={`date${index}`}> {list.date}</p> 
+                </div> ))}
             
 
-            <div id='circle-right'></div>
-            <svg id="arrow-right" xmlns="http://www.w3.org/2000/svg" width="12.657" height="14.71" viewBox="0 0 12.657 14.71">
+            <div id='circle-right' onClick={(()=>IndexPlus())}></div>
+            <svg id="arrow-right" onClick={(()=>IndexPlus())} xmlns="http://www.w3.org/2000/svg" width="12.657" height="14.71" viewBox="0 0 12.657 14.71">
             <path  d="M7.355,0,14.71,12.657H0Z" transform="translate(12.657) rotate(90)" fill="black"/>
             </svg>   
 
@@ -222,7 +239,7 @@ function DivBody () {
         </div>
     </Body>
 }
-export default DivBody;
+export default DivEvents;
 
 const Body = styled.div``
 

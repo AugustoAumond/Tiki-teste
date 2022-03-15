@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import {HiOutlinePlusSm} from 'react-icons/hi'
 
-
-function Background () {
+function BackgroundandTitles () {
     
     return <DivImg>
             <img src="img/Background.jpg" alt="" /> 
@@ -44,7 +43,7 @@ function Background () {
             </DivImg>
 }
 
-export default Background;
+export default BackgroundandTitles;
 
 const DivImg = styled.div`
 img {       
@@ -63,65 +62,69 @@ img {
 
 #tittle2{
     position: absolute;
-    top: 2300px;
+    top: 2372px;
     left: 1036px;
 }
 
 #icon-yellow{
     position: absolute;
-    height: 27px;
-    width: 25px;
+    height: 29px;
+    width: 27px;
     color: #fb0;
-    top: 2415px;
+    top: 2514px;
     left: 1348px;
 }
 
 #icon-yellow2{
     position: absolute;
-    height: 27px;
-    width: 25px;
+    height: 29px;
+    width: 27px;
     color: #ffbb0060;
-    top: 2442px;
+    top: 2543px;
     left: 1348px;
 }
 
 #icon-yellow3{
     position: absolute;
-    height: 27px;
-    width: 25px;
+    height: 29px;
+    width: 27px;
     color: #ffbb0025;
-    top: 2467px;
+    top: 2570px;
     left: 1348px;
 }
 
 #titlefinal {
     position: absolute;
-    top: 3173px;
+    top: 3364px;
     left: 1315px;
     color: white;
     font-size: 18px;
     font-weight: bold;
-
+    font-family: 'Open-Sans', sans-serif;
 }
 
 #finaltext{
     position: absolute;
     text-align: center;
-    top: 3220px;
+    top: 3406px;
     left: 842px;
     width: 1107px;
-    font-size: 10px regular;
+    font-weight: bold;
+    font-size: 10px;
     color: white;
+    font-family: 'Open Sans';
 }
 
 #finaltext2{
     position: absolute;
     text-align: center;
-    top: 3348px;
+    top: 3463px;
     left: 842px;
     width: 1107px;
-    font-size: 10px regular;
+    font-size: 10px;
+    font-weight: bold;
     color: white;
+    font-family: 'Open Sans';
 }
     
 `

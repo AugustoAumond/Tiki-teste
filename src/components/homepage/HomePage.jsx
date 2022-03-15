@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Background from '../background/Background';
-import DivBody from '../divbody/DivBody';
+import BackgroundandTitles from '../background/Background';
+import DivEvents from '../divevents/DivEvents';
 import Register from '../divregister/DivRegister';
 
 
@@ -12,8 +12,8 @@ function HomePage() {
     return (
     
       <Body>
-        <Background/>
-        <DivBody/>
+        <BackgroundandTitles/>
+        <DivEvents/>
         <Register/>   
       </Body>   
   );
