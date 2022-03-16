@@ -62,6 +62,18 @@
         color: #FC2BEE;    
     }
 
+    input[type=radio]:checked + label:before {
+        color: #FC2BEE;
+        border-radius: 50px;
+        content: "\2022";
+        position: absolute;
+        top: 369px;
+        left: 45px;
+        width: 16px;
+        height: 15px;
+        background: #FC2BEE;
+    }
+
     #radio{
         position: absolute;
         top: 362px;

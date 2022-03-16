@@ -33,23 +33,18 @@ function Register () {
     // Validando a checkbox;
     function OnCheck () {
         setChecked(!checked)
-        let radio = document.querySelector('#radio');
-        if (checked === true){
-            radio.style.color = '#FC2BEE';
-            radio.style.background = '#FC2BEE';
-        }
     }
 
     // Validando os dados dos inputs e zerando os mesmos;
     function Enviar(){
         let list = JSON.parse(localStorage.getItem('list'));  
-        if  (name.value === null || email.value === null){
+        if  (name === null || email === null){
             window.alert(' Insira seus dados!');
         }    
-        else if (name.value < 4){
+        else if (name.value.length < 4){
             window.alert('Digite seu nome.')
         }
-        else if (email.value === null || email.value.indexOf('@') === -1){
+        else if (email.value.indexOf('@') === -1 || email.value.indexOf('.') === -1){
             window.alert('Digite um email válido')
         } else if (checked === false){
             window.alert('É necessário aceitar a política de privacidade.')
@@ -74,12 +69,12 @@ function Register () {
     <DivRegister>
        <div id="box">
            <p id='txt'> CADASTRE-SE E FIQUE POR DENTRO DAS NOVIDADES</p>
-           <input id='name'  placeholder='     Nome'  onBlur={(()=> Name())}/>
+           <input id='name'  placeholder='     Nome'  onBlur={(()=> Name())}></input>
             <input id='email' placeholder='     Email' onBlur={(()=> Email())}/>
-            <input id="radio"  type='radio' checked={checked===true} onClick={(()=>OnCheck())} /> <p id='check'>Declaro que li e aceito a politica de privacidade</p>
-            <button id='enviar' onClick={(()=> Enviar())}> <p id='button'> ENVIAR </p> </button>
-            
-
+            <input id="radio"  type='radio' checked={checked===true} onClick={(()=>OnCheck())} /> 
+            <label id="labradio" onClick={(()=>OnCheck())}></label>
+            <p id='check'>Declaro que li e aceito a politica de privacidade</p>
+            <button id='enviar' onClick={(()=> Enviar())}> <p id='button'> ENVIAR </p> </button> 
        </div>    
     </DivRegister>
 )}
