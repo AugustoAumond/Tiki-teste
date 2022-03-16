@@ -1,6 +1,7 @@
-
 import { useEffect, useState } from 'react';
 import styled from 'styled-components'
+
+// Utilizei esse arquivo para criar a função da esteira para conseguir enxergar os códigos com clareza;
 
 function Teste(){
 const [index, setIndex] = useState(0)
