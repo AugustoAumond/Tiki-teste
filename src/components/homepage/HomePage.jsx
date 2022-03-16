@@ -22,9 +22,6 @@ export default HomePage;
 
 
 const Body = styled.div`
-position: relative;
-width: 1780px;
-height: 3000px; 
 `
 
 

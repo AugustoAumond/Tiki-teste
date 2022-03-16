@@ -145,8 +145,10 @@ function DivEvents () {
             </g>
             </svg>
 
-            <p id='knowing'> VOCÊ JÁ ESTAVA SABENDO?</p>
+            <p id='knowingtxt'> VOCÊ JÁ ESTAVA SABENDO?</p>
+            <div id='divcity'>
             <img id='city' src='img/imagem.jpg' onMouseOver={(()=>OpenDiv())} onMouseOut={(()=>CloseDiv())}/>
+            </div>
             <div id='sharer'>
                 <p id='sharertxt'>Espalhe esse SPOILER:</p>
                 <svg id="facebook" xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
@@ -197,7 +199,7 @@ function DivEvents () {
                 </svg>
 
             </div>
-            <p id='comming'>CONFIRA O QUE JÁ SAIU E O QUE ESTÁ POR VIR!</p>
+            <p id='commingtxt'>CONFIRA O QUE JÁ SAIU E O QUE ESTÁ POR VIR!</p>
 
             <div id='circle-left' onClick={(()=> IndexSubtract())}></div>
             <svg id="arrow-left" onClick={(()=> IndexSubtract())} xmlns="http://www.w3.org/2000/svg" width="12.657" height="14.71" viewBox="0 0 12.657 14.71">

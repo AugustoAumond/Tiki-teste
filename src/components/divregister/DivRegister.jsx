@@ -8,6 +8,7 @@ function Register () {
     let name = document.querySelector('#name'); 
     let email = document.querySelector('#email');
     
+    // Definindo as cores baseado no focus;
     function Name(){         
         let name = document.querySelector('#name'); 
         name.style.border =' solid 1px #FC2BEE';
@@ -18,6 +19,7 @@ function Register () {
         }     
     }
 
+    // Definindo as cores baseado no focus;
     function Email(){   
         let email = document.querySelector('#email');
         email.style.border =' solid 1px #FC2BEE';
@@ -28,6 +30,7 @@ function Register () {
         }  
     }
 
+    // Validando a checkbox;
     function OnCheck () {
         setChecked(!checked)
         let radio = document.querySelector('#radio');
@@ -37,13 +40,17 @@ function Register () {
         }
     }
 
+    // Validando os dados dos inputs e zerando os mesmos;
     function Enviar(){
-        let list = JSON.parse(localStorage.getItem('list'));        
-        if (name.value === null || name.value < 4){
-            window.alert('Favor digitar um nome.')
+        let list = JSON.parse(localStorage.getItem('list'));  
+        if  (name.value === null || email.value === null){
+            window.alert(' Insira seus dados!');
+        }    
+        else if (name.value < 4){
+            window.alert('Digite seu nome.')
         }
         else if (email.value === null || email.value.indexOf('@') === -1){
-            window.alert('Por favor digite um email válido')
+            window.alert('Digite um email válido')
         } else if (checked === false){
             window.alert('É necessário aceitar a política de privacidade.')
         }else {

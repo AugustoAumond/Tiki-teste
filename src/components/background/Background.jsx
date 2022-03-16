@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import {HiOutlinePlusSm} from 'react-icons/hi'
+import './Background.css';
 
 function BackgroundandTitles () {
     
     return <DivImg>
-            <img src="img/Background.jpg" alt="" /> 
+            <img id='background' /> 
 
             <svg id="logo-tiki" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="400" height="123.789" viewBox="0 0 400 123.789">
             <defs>
@@ -27,15 +28,15 @@ function BackgroundandTitles () {
             </g>
             </svg>
 
-            <HiOutlinePlusSm id='icon-yellow'/>
-            <HiOutlinePlusSm id='icon-yellow2'/>
-            <HiOutlinePlusSm id='icon-yellow3'/>
+            <HiOutlinePlusSm id='icon-yellow-bottom'/>
+            <HiOutlinePlusSm id='icon-yellow2-bottom'/>
+            <HiOutlinePlusSm id='icon-yellow3-bottom'/>
 
             <div>
                 <p id='titlefinal'> TEXTO LEGAL </p>
                 <p id='finaltext'> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit omnis tenetur perferendis illum dicta nisi ut. Deserunt, aliquid suscipit molestias repellat unde assumenda ex quisquam a quae, adipisci neque officia!
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sapiente natus magni labore consectetur id et beatae, aut laudantium eaque accusantium voluptatem sed maxime voluptates culpa fuga praesentium voluptate nam.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam explicabo nihil, debitis similique a perferendis omnis ullam neque maxime nemo blanditiis, rem iusto ad voluptatem excepturi, deserunt culpa ut recusandae!</p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
                 <p id='finaltext2'> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse aliquam iste optio magni natus dolorem eligendi sapiente quos veniam, saepe sunt doloribus, non voluptates commodi fugit assumenda delectus necessitatibus enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, facilis ipsa? Quas sint similique, aliquam quidem saepe corporis quo illum eveniet veniam cum cupiditate neque beatae delectus rerum velit voluptatibus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis voluptatibus sapiente, est porro voluptates quae explicabo necessitatibus sint! Totam tempora rem mollitia dignissimos, error sed reiciendis! Modi laboriosam earum nobis?</p>
             </div>
@@ -46,85 +47,5 @@ function BackgroundandTitles () {
 export default BackgroundandTitles;
 
 const DivImg = styled.div`
-img {       
-    position: relative;
-    top: 22px;
-    left: 272px;
-    width: 2202px;
-    height: 3559px;
-}
-
-#logo-tiki {
-    position: absolute;
-    top: 156px;
-    left: 1207px;
-}
-
-#tittle2{
-    position: absolute;
-    top: 2372px;
-    left: 1036px;
-}
-
-#icon-yellow{
-    position: absolute;
-    height: 29px;
-    width: 27px;
-    color: #fb0;
-    top: 2514px;
-    left: 1348px;
-}
-
-#icon-yellow2{
-    position: absolute;
-    height: 29px;
-    width: 27px;
-    color: #ffbb0060;
-    top: 2543px;
-    left: 1348px;
-}
-
-#icon-yellow3{
-    position: absolute;
-    height: 29px;
-    width: 27px;
-    color: #ffbb0025;
-    top: 2570px;
-    left: 1348px;
-}
-
-#titlefinal {
-    position: absolute;
-    top: 3364px;
-    left: 1315px;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    font-family: 'Open-Sans', sans-serif;
-}
-
-#finaltext{
-    position: absolute;
-    text-align: center;
-    top: 3406px;
-    left: 842px;
-    width: 1107px;
-    font-weight: bold;
-    font-size: 10px;
-    color: white;
-    font-family: 'Open Sans';
-}
-
-#finaltext2{
-    position: absolute;
-    text-align: center;
-    top: 3463px;
-    left: 842px;
-    width: 1107px;
-    font-size: 10px;
-    font-weight: bold;
-    color: white;
-    font-family: 'Open Sans';
-}
     
 `
